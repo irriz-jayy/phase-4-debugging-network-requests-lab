@@ -12,7 +12,6 @@ class ToysController < ApplicationController
   end
 
   def update
-    byebug
     toy = Toy.find_by(id: params[:id])
     toy.update(toy_params)
   end
