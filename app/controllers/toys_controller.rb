@@ -7,12 +7,12 @@ class ToysController < ApplicationController
   end
 
   def create
-    byebug
     toy = Toy.create(toy_params)
     render json: toy, status: :created
   end
 
   def update
+    byebug
     toy = Toy.find_by(id: params[:id])
     toy.update(toy_params)
   end
